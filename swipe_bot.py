@@ -1,13 +1,13 @@
 from selenium import webdriver
 from time import sleep
-from secrets import username, password
+from secrets import username, password,website
 
 class swipeBot():
     def __init__(self):
         self.driver = webdriver.Chrome("C:/bin/chromedriver.exe")
 
     def login(self):
-        self.driver.get('https://tinder.com')
+        self.driver.get(website)
 
         sleep(3)
         fb_Button = self.driver.find_element_by_xpath(
